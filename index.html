@@ -5,35 +5,39 @@
     <meta name="description" content="DataViz Météo">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <!--<script src="https://kit.fontawesome.com/2897f175fe.js" crossorigin="anonymous"></script>-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="js/index.js"></script>
+
     <title>Météo du jour</title>
 </head>
     <body>
+
         <main>
-            <form method="post" action="villes.js">
+            <h1>Ma Météo</h1>
+
+            <form method="post" action="meteo.html">
                 <p>
-                    Saisissez la ville :
-                    <select name="ville">
+                    <label for="ville">Votre ville</label></br> <select name="ville" id="villes">
                         <option value="Paris">Paris</option>
                         <option value="Londres">Londres</option>
                         <option value="New York">New York</option>
                     </select>
                 </p>
+
                 <p>
-                    Saisissez le pays :
-                    <select name="pays">
+                    <label for="pays">Votre pays</label></br> <select name="pays" id="pays">
                         <option value="France">France</option>
                         <option value="Angleterre">Angleterre</option>
                         <option value="Etats Unis">Etats Unis</option>
                     </select>
                 </p>
-            </form>
-            <form >
-                <p>
-                    <label for="pseudo">Votre pseudo</label> : <input type="text" name="pseudo" id="pseudo" />
-                </p>
-             </form>
-        </main>
-    </body>
 
+                <p>
+                    <label for="dates">Votre date</label></br> <input type="date" name="dates" id="dates" />
+                </p>
+            </form>
+        </main>
+
+
+    </body>
+</html>
