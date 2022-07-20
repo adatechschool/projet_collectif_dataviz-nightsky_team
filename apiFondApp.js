@@ -1,26 +1,18 @@
 
 function searchBackground(){
+const countryImage = [] ; 
 const apiKey = "dDVqjeRu2vBiQub8q4Ec5_qg79wZN7Ti4qL-rBNMs8c";
-const apiUrl = "https://api.unsplash.com/photos/?client_id="+apiKey; 
+const apiUrl = "https://api.unsplash.com/photos/?client_id="+apiKey
 
 // request to the API 
 
    fetch(apiUrl)
-   .then(reponse => reponse.json())
-   .then(reponse2 => console.table(reponse2))
-    
- 
-    
+
+   .then(response => response.json())
+   .then(response2 => console.table(response2))
+   
+    console.log(response.json())
 }
-searchBackground()
+    
 
-/*.then(function(data) {
-        data.results.forEach(photo => {
-
-            let backGround = `
-             <img src="${photo.urls.regular}" > 
-             `;
-            document.getElementById("backGround").append(results) 
-        });
-        */
-
+   searchBackground()
