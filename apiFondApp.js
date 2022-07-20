@@ -1,5 +1,5 @@
 
-function searchBackground(){
+/* function searchBackground(){
 const apiKey = "dDVqjeRu2vBiQub8q4Ec5_qg79wZN7Ti4qL-rBNMs8c";
 const apiUrl = "https://api.unsplash.com/photos/?client_id="+apiKey; 
 
