@@ -1,18 +1,25 @@
 
-function searchBackground(){
+const img = document.getElementById('img'); 
 const countryImage = [] ; 
 const apiKey = "dDVqjeRu2vBiQub8q4Ec5_qg79wZN7Ti4qL-rBNMs8c";
-const apiUrl = "https://api.unsplash.com/photos/?client_id="+apiKey
+const apiUrl = "https://api.unsplash.com/photos/?client_id="+apiKey; //?query=landscape&country searched
+
 
 // request to the API 
 
    fetch(apiUrl)
 
-   .then(response => response.json())
-   .then(response2 => console.table(response2))
+   .then(res => res.json()) 
+   .then((data) => {
+      console.log(img)
+      //img.src = data[1].urls.regular
+      let body = document.getElementsByTagName('body')
+      document.body.style.backgroundImage = 'url("data[1].urls.regular")';
+   }) //  ici pour envoyer vers html  
+    //query parameter ?"country"&landscape
    
-    console.log(response.json())
-}
+ 
     
 
-   searchBackground()
+
+

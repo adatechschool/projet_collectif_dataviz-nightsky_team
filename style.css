@@ -12,6 +12,9 @@ body {
     text-align: center;
     margin: auto;
     /*padding: 40px 0;*/
+    background-image: url('#img');
+    background-position: center;
+    background-size: cover ;
 }
 
 h1 {
