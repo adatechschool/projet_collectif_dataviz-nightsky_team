@@ -1,11 +1,11 @@
 let ville = 'Paris';
 recevoirTemperature(ville);
 
-let button = document.querySelector('#changer');
+/*let button = document.querySelector('#changer');
 button.addEventListener('click', () => {
   ville = prompt('Choisissez une ville :');
   recevoirTemperature(ville);
-});
+});*/
 
 function recevoirTemperature(ville) {
   const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + ville + '&appid=eb3e55ca0093756f2541d5ad27c5021c&units=metric';
