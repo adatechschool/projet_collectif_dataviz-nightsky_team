@@ -14,8 +14,10 @@ body {
 
    
     background-image: url('#img');
-    background-position: center;
     background-size: cover ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 h1 {
@@ -26,3 +28,12 @@ h1 {
 p {
     margin-bottom: 30px;
 }
+details > summary {
+    list-style: none;
+  }
+  
+  details > summary::marker, /* Latest Chrome, Edge, Firefox */ 
+  details > summary::-webkit-details-marker /* Safari */ {
+    display: none;
+  }
+  
