@@ -1,3 +1,7 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -8,11 +12,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(0, 204, 203);
+    background-color: rgb(66, 70, 70);
     text-align: center;
     margin: auto;
-
-   
     background-image: url('#img');
     background-position: center;
     background-size: cover ;
@@ -25,4 +27,27 @@ h1 {
 
 p {
     margin-bottom: 30px;
+}
+
+.btn-primary {
+    width : 6em;
+    height: 2.2em;
+    margin-top: 0em;
+    margin-left: 17em;
+    display: flex;
+    background-color: rgb(30, 17, 207);
+    border: rgb(30, 17, 207);
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 6em;
+    margin-left: 5em;
+    width : 40em;;
+    height: 2em;
+    margin-top: 1em ;
+    display: flex;
 }
