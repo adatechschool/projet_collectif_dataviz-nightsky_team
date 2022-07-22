@@ -16,8 +16,10 @@ body {
     text-align: center;
     margin: auto;
     background-image: url('#img');
-    background-position: center;
     background-size: cover ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 h1 {
@@ -28,6 +30,7 @@ h1 {
 p {
     margin-bottom: 30px;
 }
+<<<<<<< HEAD
 
 .btn-primary {
     width : 6em;
@@ -51,3 +54,14 @@ p {
     margin-top: 1em ;
     display: flex;
 }
+=======
+details > summary {
+    list-style: none;
+  }
+  
+  details > summary::marker, /* Latest Chrome, Edge, Firefox */ 
+  details > summary::-webkit-details-marker /* Safari */ {
+    display: none;
+  }
+  
+>>>>>>> fcb5610dc36f0f88f55edb9ea7f02913769e2377

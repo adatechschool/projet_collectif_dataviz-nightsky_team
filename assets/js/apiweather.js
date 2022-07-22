@@ -1,6 +1,10 @@
 $(function(){
     var apikey = 'd143c443e6a33a030133989f7848c1a8';
+<<<<<<< HEAD
     var baseUrl = 'https://api.openweathermap.org/data/2.5/weather?appid=' + apikey + '&lang=fr' + '&units=metric';
+=======
+    var baseUrl = 'https://api.openweathermap.org/data/2.5/weather?appid=' + apikey + '&units=metric';
+>>>>>>> fcb5610dc36f0f88f55edb9ea7f02913769e2377
     
 
     $('#weather button').click(function(e){
@@ -16,6 +20,7 @@ $(function(){
             console.log(response);
             //title
             $('.card-title').text(response.name);
+<<<<<<< HEAD
             
             //Description
             $('.description-weather').text(response.weather[0].description);
@@ -28,6 +33,13 @@ $(function(){
             $('.temp-weather').text(temp);
             $('.temp-max-weather').text(tempMax);
             $('.temp-min-weather').text(tempMin);
+=======
+
+            //Temperature
+            $('.temp-weather').text(response.main.temp);
+            $('.temp-max-weather').text(response.main. temp_max);
+            $('.temp-min-weather').text(response.main.temp_min);
+>>>>>>> fcb5610dc36f0f88f55edb9ea7f02913769e2377
         })
         .fail(function(){
             console.error('Erreur');

@@ -22,3 +22,18 @@ html, body {
     background: rgba(178, 223, 251, .3);
     cursor: pointer;
   }
+
+  
+  details > summary {
+    list-style: none;
+  }
+  
+  details > summary::marker, /* Latest Chrome, Edge, Firefox */ 
+  details > summary::-webkit-details-marker /* Safari */ {
+    display: none;
+  }
+
+  #saisieVille {
+    width: 300px;
+    margin: auto;
+  }
