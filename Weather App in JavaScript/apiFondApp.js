@@ -10,7 +10,7 @@ const apiUrl = "https://api.unsplash.com/photos/?client_id="+apiKey+"&query=land
 fetch(apiUrl)
    .then(res => res.json()) 
    .then((data) => {
-      let body = document.getElementsByTagName('body')
+      //let body = document.getElementsByTagName('body')
       document.body.style.backgroundImage = 'url('+data[2].urls.regular+')';
    }) //  ici pour envoyer vers html  
     //query parameter ?"country"&landscape

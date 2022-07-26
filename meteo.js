@@ -1,7 +1,7 @@
 let ville = 'Paris';
 recevoirTemperature(ville);
 
-/*let button = document.querySelector('#changer');
+/*let button = document.querySelector('#saisieVille');
 button.addEventListener('click', () => {
   ville = prompt('Choisissez une ville :');
   recevoirTemperature(ville);

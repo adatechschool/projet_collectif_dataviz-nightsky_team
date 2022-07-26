@@ -4,14 +4,18 @@
   <head>
     <meta charset="utf-8">
     <title>Weather App in JavaScript | CodingNepal</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylenew.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Linking BoxIcon for Icon -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
     <div class="wrapper">
-      <header><i class='bx bx-left-arrow-alt'></i>Météo en direct</header>
+      <img id="img" src="" alt="">
+      <header>
+        <i class='bx bx-left-arrow-alt'></i>
+        Météo en direct
+      </header>
       <section class="input-part"> <!--section première page de méteo-->
         <p class="info-txt"></p>
         <div class="content">
@@ -67,7 +71,7 @@
           </div>
         </div>
         <!--prévisions futures-->
-        <div class="future-forecast">.
+        <!--<div class="future-forecast">.
           <div class="weather-forecast" id="weather-forecast">
             <div class="weather-forecast-item">
                 <div class="day">Tue</div>
@@ -99,7 +103,7 @@
                   <div class="temp">Night - 25.6&#176; C</div>
                 <div class="temp">Day - 35.6&#176; C</div>
             </div>
-        </div>
+        </div>-->
       </div>
 
       </section>
@@ -107,13 +111,16 @@
 
     </div>
 
+    <footer>
+      Designed and coded by<br>
+      nightSky_team</a>
+    </footer>
+
     
-    <script src="script.js"></script>
+    <script src="scriptnew.js"></script>
+    <script src="apiFondApp.js"></script>
 
   </body>
-  <footer>
-    Designed and coded by<br>
-    nightSky_team</a>
-  </footer>
+  
 
 </html>
