@@ -42,7 +42,7 @@ function onError(error){
 }
 
 function fetchData(){
-    infoTxt.innerText = "Le soleil est en cours de chargement...";
+    infoTxt.innerText = "La météo est en cours de chargement...";
     infoTxt.classList.add("pending");
     // getting api response and returning it with parsing into js obj and in another 
     // then function calling weatherDetails function with passing api result as an argument

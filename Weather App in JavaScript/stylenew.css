@@ -279,6 +279,7 @@ header i{
         align-items: none;
         overflow-y: scroll;
     }
+}
 @media only screen and  (max-width:730px){
     
     .container{
