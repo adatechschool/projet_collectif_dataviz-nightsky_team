@@ -16,7 +16,8 @@ place = document.getElementById('place');
     fetch(apiImage)
     .then(res => res.json()) 
     .then((data) => { document.body.style.backgroundImage = 'url('+data.hits[0].largeImageURL+')';//data[1].urls.regular+')';
-    console.log(data)})
+    //console.log(data)
+   })
  };
 
 
