@@ -1,18 +1,24 @@
-const img = document.getElementById('img'); 
-const countryImage = [] ; 
+place = document.getElementById('place'); 
 
-const apiKey = "dDVqjeRu2vBiQub8q4Ec5_qg79wZN7Ti4qL-rBNMs8c";
-const apiUrl = "https://api.unsplash.com/photos/?client_id="+apiKey+"&query=landscape-france"; //?query=landscape&country searched
+ inputField.addEventListener("keyup", e =>{
+    // if user pressed enter btn and input value is not empty
+    if(e.key == "Enter" && inputField.value != ""){
+        requestApi_apifondapp(inputField.value);
+    }
+ });
+
+ function requestApi_apifondapp(city){
+    apiImage = "https://pixabay.com/api/?key=28862687-b3081f078d5c4866578f6cfde&q=architecture+"+city+"&image_type=photo";
+    fetchData_apifondapp();
+ };
+
+ function fetchData_apifondapp(){
+    fetch(apiImage)
+    .then(res => res.json()) 
+    .then((data) => { document.body.style.backgroundImage = 'url('+data.hits[0].largeImageURL+')';//data[1].urls.regular+')';
+    console.log(data)})
+ };
 
 
-// request to the API 
 
-fetch(apiUrl)
-   .then(res => res.json()) 
-   .then((data) => {
-      //let body = document.getElementsByTagName('body')
-      document.body.style.backgroundImage = 'url('+data[2].urls.regular+')';
-   }) //  ici pour envoyer vers html  
-    //query parameter ?"country"&landscape
-   
  
