@@ -1,21 +1,3 @@
-/*const wrapper = document.querySelector(".wrapper"),
-//inputPart = document.querySelector(".input-part"),
-infoTxt = inputPart.querySelector(".info-txt"),
-//inputField = inputPart.querySelector("input"),
-locationBtn = inputPart.querySelector("button"),
-weatherPart = wrapper.querySelector(".weather-part"),
-wIcon = weatherPart.querySelector("img"),
-arrowBack = wrapper.querySelector("header i");
-
-let api;*/
-
-/*inputField.addEventListener("keyup", e =>{
-    // if user pressed enter btn and input value is not empty
-    if(e.key == "Enter" && inputField.value != ""){
-        requestApi(inputField.value);
-    }
-});*/
-
 locationBtn.addEventListener("click", () =>{
     if(navigator.geolocation){ // if browser support geolocation api
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
@@ -27,19 +9,19 @@ locationBtn.addEventListener("click", () =>{
 function requestApi_scriptnew(city){
     api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=fr&units=metric&appid=d143c443e6a33a030133989f7848c1a8`;
     fetchData();
-}
+};
 
 function onSuccess(position){
     const {latitude, longitude} = position.coords; // getting lat and lon of the user device from coords obj
     api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=fr&units=metric&appid=d143c443e6a33a030133989f7848c1a8`;
     fetchData();
-}
+};
 
 function onError(error){
     // if any error occur while getting user location then we'll show it in infoText
     infoTxt.innerText = error.message;
     infoTxt.classList.add("error");
-}
+};
 
 function fetchData(){
     infoTxt.innerText = "Le soleil est en cours de chargement...";
@@ -55,7 +37,7 @@ function fetchData(){
         
     });
     
-}
+};
 
 function weatherDetails(info){
     if(info.cod == "404"){ // if user entered city name isn't valid
@@ -94,7 +76,7 @@ function weatherDetails(info){
         inputField.value = "";
         wrapper.classList.add("active");
     }
-}
+};
 
 arrowBack.addEventListener("click", ()=>{
     wrapper.classList.remove("active");
