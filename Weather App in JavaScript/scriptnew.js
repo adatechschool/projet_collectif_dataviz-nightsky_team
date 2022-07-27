@@ -1,20 +1,20 @@
-const wrapper = document.querySelector(".wrapper"),
-inputPart = document.querySelector(".input-part"),
+/*const wrapper = document.querySelector(".wrapper"),
+//inputPart = document.querySelector(".input-part"),
 infoTxt = inputPart.querySelector(".info-txt"),
-inputField = inputPart.querySelector("input"),
+//inputField = inputPart.querySelector("input"),
 locationBtn = inputPart.querySelector("button"),
 weatherPart = wrapper.querySelector(".weather-part"),
 wIcon = weatherPart.querySelector("img"),
 arrowBack = wrapper.querySelector("header i");
 
-let api;
+let api;*/
 
-inputField.addEventListener("keyup", e =>{
+/*inputField.addEventListener("keyup", e =>{
     // if user pressed enter btn and input value is not empty
     if(e.key == "Enter" && inputField.value != ""){
         requestApi(inputField.value);
     }
-});
+});*/
 
 locationBtn.addEventListener("click", () =>{
     if(navigator.geolocation){ // if browser support geolocation api
@@ -24,7 +24,7 @@ locationBtn.addEventListener("click", () =>{
     }
 });
 
-function requestApi(city){
+function requestApi_scriptnew(city){
     api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=fr&units=metric&appid=d143c443e6a33a030133989f7848c1a8`;
     fetchData();
 }
@@ -46,10 +46,15 @@ function fetchData(){
     infoTxt.classList.add("pending");
     // getting api response and returning it with parsing into js obj and in another 
     // then function calling weatherDetails function with passing api result as an argument
-    fetch(api).then(res => res.json()).then(result => weatherDetails(result)).catch(() =>{
+    fetch(api)
+    .then(res => res.json())
+    .then(result => weatherDetails(result))
+    .catch(() =>{
         infoTxt.innerText = "Oups! Un problème est survenu.";
         infoTxt.classList.replace("pending", "error");
+        
     });
+    
 }
 
 function weatherDetails(info){
