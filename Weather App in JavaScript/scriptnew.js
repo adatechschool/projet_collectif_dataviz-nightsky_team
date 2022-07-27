@@ -31,6 +31,7 @@ function fetchData(){
     fetch(api)
     .then(res => res.json())
     .then(result => weatherDetails(result))
+    console.log(result())
     .catch(() =>{
         infoTxt.innerText = "Oups! Un problème est survenu.";
         infoTxt.classList.replace("pending", "error");
