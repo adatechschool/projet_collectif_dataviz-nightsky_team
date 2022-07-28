@@ -82,6 +82,8 @@ function weatherDetails(info){
 
 arrowBack.addEventListener("click", ()=>{
     wrapper.classList.remove("active");
+    document.body.style.backgroundImage = "none";
+    document.body.style.background = "linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9)";
 });
 
 
