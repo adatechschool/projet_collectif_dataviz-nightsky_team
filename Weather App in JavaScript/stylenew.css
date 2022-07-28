@@ -49,6 +49,8 @@ header i{
 }
 .bx {
   position: relative;
+}
+.bx-left-arrow-alt {
   top: 5px;
 }
 .wrapper .input-part{

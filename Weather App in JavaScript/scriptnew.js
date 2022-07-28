@@ -54,7 +54,7 @@ function weatherDetails(info){
 
         // using custom weather icon according to the id which api gives to us
         if(id == 800){
-            wIcon.src = "icons1/day.svg";
+            wIcon.src = "icons/clear.svg";
         }else if(id >= 200 && id <= 232){
             wIcon.src = "icons/storm.svg";  
         }else if(id >= 600 && id <= 622){
