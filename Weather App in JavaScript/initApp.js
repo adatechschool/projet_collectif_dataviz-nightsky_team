@@ -1,16 +1,10 @@
-const timeEl = document.getElementById('time');
+//const timeEl = document.getElementById('time');
 const dateEl = document.getElementById('date');
 const currentWeatherItemsEl = document.getElementById('current-weather-items');
 const timezone = document.getElementById('time-zone');
 const countryEl = document.getElementById('country');
 const weatherForecastEl = document.getElementById('weather-forecast');
 const currentTempEl = document.getElementById('current-temp');
-
-
-const days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi']
-const months = ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
-
-
 
 // pas toucher à la suite
 
@@ -30,10 +24,5 @@ let api;
       if(e.key == "Enter" && inputField.value != ""){
           requestApi_scriptnew(inputField.value);
           requestApi_apifondapp(inputField.value);
-          console.log("ici3")
       }
     });
-
-
-// pâs touher avant cette ligne
-
