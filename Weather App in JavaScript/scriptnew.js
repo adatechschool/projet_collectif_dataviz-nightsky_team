@@ -37,8 +37,8 @@ function fetchData(){
     });   
 };
 
-
 function weatherDetails(info){
+    console.log(info)
     if(info.cod == "404"){ // if user entered city name isn't valid
         infoTxt.classList.replace("pending", "error");
         infoTxt.innerText = `${inputField.value} n'est pas un nom de ville valide`;
@@ -48,9 +48,8 @@ function weatherDetails(info){
         const country = info.sys.country;
         const {description, id} = info.weather[0];
         const {temp, feels_like, humidity} = info.main;
-        // test juanita
-        const temps = info.timezone;
-
+        const lat = info.coord.lat
+        const lon = info.coord.lon
 
         // using custom weather icon according to the id which api gives to us
         if(id == 800){
@@ -74,6 +73,8 @@ function weatherDetails(info){
         weatherPart.querySelector(".temp .numb-2").innerText = Math.floor(feels_like);
         weatherPart.querySelector(".humidity span").innerText = `${humidity}%`;
         infoTxt.classList.remove("pending", "error");
+        document.querySelector(".country").innerHTML = lat + " / " + lon
+
         infoTxt.innerText = "";
         inputField.value = "";
         wrapper.classList.add("active");
@@ -87,35 +88,18 @@ arrowBack.addEventListener("click", ()=>{
 });
 
 
-// test
+
 
 const API_KEY = 'd143c443e6a33a030133989f7848c1a8'
-
-setInterval(() => {
-    const time = new Date();
-    const month = time.getMonth();
-    const date = time.getDate();
-    const day = time.getDay();
-    const hour = time.getHours();
-    const hoursIn12HrFormat = hour >= 13 ? hour %12: hour
-    const minutes = time.getMinutes();
-    const ampm = hour >=12 ? 'PM' : 'AM'
-
-    timeEl.innerHTML = (hoursIn12HrFormat < 10? '0'+hoursIn12HrFormat : hoursIn12HrFormat) + ':' + (minutes < 10? '0'+minutes: minutes)+ ' ' + `<span id="am-pm">${ampm}</span>`
-
-    dateEl.innerHTML = days[day] + ', ' + date+ ' ' + months[month]
-
-}, 1000);
-
 getWeatherData()
 function getWeatherData () {
     navigator.geolocation.getCurrentPosition((success) => {
         
         let {latitude, longitude } = success.coords;
 
-        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`).then(res => res.json()).then(data => {
-
-        console.log(data)
+        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`)
+        .then(res => res.json())
+        .then(data => {
         showWeatherData(data);
         })
 
@@ -173,11 +157,9 @@ function showWeatherData (data){
                 <div class="temp">Night - ${day.temp.night}&#176;C</div>
                 <div class="temp">Day - ${day.temp.day}&#176;C</div>
             </div>
-            
             `
         }
     })
-
 
     weatherForecastEl.innerHTML = otherDayForcast;
 }
